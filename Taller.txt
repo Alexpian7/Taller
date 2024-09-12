@@ -1,0 +1,116 @@
+Taller Moviles
+
+Ejer 1.
+CREATE TABLE " Contactos" (
+	"id"	INTEGER,
+	"nombre"	TEXT,
+	"telefono"	TEXT,
+PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+Ejer 2.
+
+CREATE TABLE " Contactos" (
+	"id"	INTEGER,
+	"nombre"	TEXT,
+	"telefono"	TEXT,
+	"email"	TEXT,
+	"direccion"	TEXT,
+	"fecha_nacimiento"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+Ejer3.
+INSERT INTO Contactos (id, nombre, telefono, email,direccion,fecha_nacimiento) 
+VALUES (1, 'John Doe', '1234567890','john.doe@example.com','123 Main Street','1990-05-15');
+
+INSERT INTO Contactos (id, nombre, telefono, email,direccion,fecha_nacimiento) 
+VALUES (2, ' Jane Smith', '9876543210','jane.smith@example.com','456 Elm Street','1985-09-20');
+
+INSERT INTO Contactos (id, nombre, telefono, email,direccion,fecha_nacimiento) 
+VALUES (3, 'Bob Johnson', '5551234567','bob.johnson@example.com','789 Oak Streett','1978-12-01');
+
+INSERT INTO Contactos (id, nombre, telefono, email,direccion,fecha_nacimiento) 
+VALUES (4, ' Alice Williams', '3216549870','alice.williams@example.com','101 Maple Street','1992-07-11');
+INSERT INTO Contactos (id, nombre, telefono, email,direccion,fecha_nacimiento) 
+VALUES (5, ' Michael Brown', ' 6543217890','michael.brown@example.com','202 Pine Street','1988-03-25');
+
+Ejer4.
+
+SELECT * from Contactos where nombre =  "John Doe";
+SELECT * FROM Contactos WHERE telefono LIKE '123%';
+SELECT * FROM contactos  ORDER BY fecha_nacimiento DESC;
+
+
+### Ejercicio 4: Creación de una Interfaz Simple en Android
+
+**Enunciado:**
+
+Crea una interfaz de usuario en un archivo activity_main.xml que incluya un TextView para mostrar un nombre y un Button para cambiar el nombre al hacer clic.
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextView para mostrar el nombre -->
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Actual"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <!-- Button para cambiar el nombre -->
+    <Button
+        android:id="@+id/buttonCambiarNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Nombre"
+        android:layout_below="@id/textViewNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
+
+### Ejercicio 5: Formulario de Registro Simple con LinearLayout
+
+**Enunciado:**
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText para el nombre -->
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- EditText para el correo electrónico -->
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su correo electrónico"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Button para registrar -->
+    <Button
+        android:id="@+id/buttonRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_gravity="center"/>
+</LinearLayout>
+
